@@ -32,7 +32,7 @@ const Login = () => {
     const { username, password } = state;
     if (username && password) {
       await axios
-        .post("http://localhost:4000/login", state)
+        .post("https://sign-up-login-backnd.herokuapp.com/login", state)
         .then((res) => {
           if (res.data.name === username && res.data.password === password) {
             setvalue(() => res.data);

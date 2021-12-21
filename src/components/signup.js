@@ -87,7 +87,7 @@ const Signup = () => {
     const { name, email, mobile, age, dateOfBirth } = state;
     if (name && email && mobile && age && dateOfBirth) {
       await axios
-        .post("http://localhost:4000/signup", state)
+        .post("https://sign-up-login-backnd.herokuapp.com/signup", state)
         .then((res) => {
           if (res.data === "created") {
             setvalue(() => "Account successfully created");
